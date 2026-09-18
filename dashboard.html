@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Emergency Resource Coordination Dashboard</title>
+    <link rel="stylesheet" href="dashboard.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="header">
+        <h1>Emergency Resource Coordination</h1>
+        <p>Live simulation summary</p>
+      </header>
+
+      <div class="toolbar">
+        <button id="runSimulationBtn" class="action-btn primary">Run Simulation</button>
+        <button id="resetSimulationBtn" class="action-btn secondary">Reset Simulation</button>
+      </div>
+
+      <main>
+        <section class="summary-grid">
+          <div class="card">
+            <h3>Total incidents</h3>
+            <p id="totalIncidents">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Assigned incidents</h3>
+            <p id="assignedIncidents">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Unassigned incidents</h3>
+            <p id="unassignedIncidents">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Available ambulances</h3>
+            <p id="availableAmbulances">0</p>
+          </div>
+
+          <div class="card">
+            <h3>Busy ambulances</h3>
+            <p id="busyAmbulances">0</p>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Incidents</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Incident ID</th>
+                  <th>Priority</th>
+                  <th>Latitude</th>
+                  <th>Longitude</th>
+                  <th>Status</th>
+                  <th>Assigned ambulance</th>
+                </tr>
+              </thead>
+              <tbody id="incidentTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+
+        <section class="panel">
+          <h2>Ambulances</h2>
+          <div class="table-wrapper">
+            <table>
+              <thead>
+                <tr>
+                  <th>Ambulance ID</th>
+                  <th>Latitude</th>
+                  <th>Longitude</th>
+                  <th>Status</th>
+                  <th>Current assignment</th>
+                </tr>
+              </thead>
+              <tbody id="ambulanceTableBody"></tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <script src="dashboard.js"></script>
+  </body>
+</html>

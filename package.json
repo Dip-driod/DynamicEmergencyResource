@@ -1,0 +1,9 @@
+{
+  "name": "emergency-resource-coordination",
+  "version": "1.0.0",
+  "description": "Simulation foundation for dynamic emergency resource coordination",
+  "main": "simulation/simulation.js",
+  "scripts": {
+    "start": "node simulation/simulation.js"
+  }
+}
